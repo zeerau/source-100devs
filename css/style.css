@@ -1,0 +1,167 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+body{
+  color: rgb(28, 25, 37);
+}
+
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+display: flex;
+justify-content: space-between;
+background-color: #F4F9FD;
+padding: 10px 20px 0;
+align-items: center;
+}
+ul{
+  display: flex;
+}
+li{
+  padding-left:20px;
+}
+button{
+  background-color:rgb(28, 25, 37) ;
+  color: aliceblue;
+  padding: 10px;
+  border: none;
+  width: 80px;
+}
+.heroSection{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F4F9FD;
+  padding-top: 2rem;
+}
+.textSection{
+flex-basis: 25%;
+margin-left: 2rem;
+padding-top: 2rem;
+}
+.textSection h1{
+  font-weight: bold;
+  width:250px;
+}
+.textSection input{
+  border: none;
+  height: 38px;
+  background-color: gainsboro;
+}
+.textSection button{
+  margin-left: -5px;
+}
+.imageSection img{
+width: 600px;
+}
+.features{
+  display: flex;
+  justify-content: space-between;
+  padding:3rem 20px 20px;
+  background-color: #F4F9FD;
+}
+.features section{
+  flex-basis: 22%;
+  margin: 15px;
+}
+.features span,h4,p,a{
+  margin: 10px 0;
+}
+.features span{
+  margin-bottom: 5px;
+}
+.features a{
+  text-decoration: none;
+  color: rgb(28, 25, 37);
+}
+.downSection{
+  width: 50%;
+  margin: 2rem 20px 1rem;
+}
+.downSection h2{
+  font-weight: bold;
+  width: 250px;
+  font-size: 1.5rem;
+}
+.downSection p{
+  width: 400px;
+  margin-bottom: 2rem;
+}
+.downSection div{
+  background-color: #F4F9FD;
+  width: 800px;
+  height: 40px;
+  margin: 0 20px;
+  margin-bottom: 0;
+  align-self: center;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+@media (max-width:768px) {
+  header{
+    border-bottom:1px solid black;
+  }
+  header h2{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 0;
+  }
+  header nav,.btn{
+    display: none;
+  }
+  .heroSection{
+    display: block;
+  }
+  .heroSection input,button{
+    display: block;
+    width: 90%;
+    margin: 10px;
+  }
+.heroSection button{
+  margin-left: 10px;
+}
+.textSection p{
+  width: 80%;
+  margin: 10px;
+}
+.imageSection img{
+  width: 100%;
+}
+.features{
+  display: block;
+}
+.features section{
+  margin-bottom: 10px;
+}
+.downSection div{
+  width: 100%;
+}
+}
